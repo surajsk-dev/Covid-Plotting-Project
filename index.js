@@ -6,6 +6,7 @@ function updateMap() {
             resData.data.forEach(element => {
                 latitude = element.coordinates.latitude;
                 longitude = element.coordinates.longitude;
+                country=element.name;
 
                 totalCases=element.latest_data.confirmed;
                 if(totalCases<1000000){
@@ -26,7 +27,7 @@ function updateMap() {
 
                 var minPopup = new mapboxgl.Popup()
 
-                minPopup.setText(`Total Cases: ${totalCases}`)
+                minPopup.setHTML(`Total Cases: ${totalCases} <br> ${country}`)
                 marker.setPopup(minPopup)
 
                 marker.setLngLat([longitude, latitude])
