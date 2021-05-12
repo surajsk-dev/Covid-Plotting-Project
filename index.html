@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corona Map</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <h1>Total Corona Virus Cases in Each Country</h1>
+        <h4>Cases < 1 Million: <span id="lm"></span></h4>
+        <h4>Cases between 1 Million and 10 Million: <span id="bt"></span></h4>
+        <h4>Cases > 10 Million: <span id="tm"></span></h4>
+        <h4>Click on Map Icon to get Total Cases in Country</h4>
+
+    </div>
+    <div id='map'></div>
+
+    <footer>
+   Developed with ♡ by Suraj Soan Kamble | 2021 </footer>
+
+</body>
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+<script>
+    mapboxgl.accessToken =
+        'pk.eyJ1Ijoic3VyYWpzb2Fua2FtYmxlIiwiYSI6ImNrb2xhcXgxajBkZnAydXFwOHdyMGM5MDQifQ.oCiMrbQaRP4s3-kuMbLEyQ';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        // normal mode
+        // style: 'mapbox://styles/mapbox/streets-v11'
+        // dark mode
+        style: 'mapbox://styles/mapbox/dark-v10',
+        zoom: 1
+        // change position
+        // center:[0,10]
+    });
+</script>
+
+<script src="/index.js"></script>
+
+</html>

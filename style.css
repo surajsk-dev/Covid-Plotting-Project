@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#map {
+    width: 100vw;
+    height: 66vh;
+}
+
+.mapboxgl-popup {
+    max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
+.mapboxgl-popup-close-button {
+    font-size: 19px;
+}
+
+#lm {
+    background-color: #ffcccb;
+    display: inline-block;
+    border: 1px solid black;
+    height: 14px;
+    width: 17px;
+}
+
+#bt {
+    background-color: #ff4040;
+    display: inline-block;
+    border: 1px solid black;
+    height: 14px;
+    width: 17px;
+}
+
+#tm {
+    background-color: #ff0000;
+    display: inline-block;
+    border: 1px solid black;
+    height: 14px;
+    width: 17px;
+}
+
+#container {
+    margin: 10px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+}
