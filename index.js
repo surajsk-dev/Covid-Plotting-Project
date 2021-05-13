@@ -10,10 +10,10 @@ function updateMap() {
 
                 totalCases=element.latest_data.confirmed;
                 if(totalCases<1000000){
-                    color = '#ffcccb';
+                    color = '#008000';
                 }
                 else if(totalCases>=1000000 && totalCases<=10000000){
-                    color='#ff4040';
+                    color='#FF4500';
                 }
                 else{
                     color='#ff0000';
@@ -23,14 +23,14 @@ function updateMap() {
                 var marker = new mapboxgl.Marker({
                         draggable: false,
                         color: color
-                    })
+                    });
 
-                var minPopup = new mapboxgl.Popup()
+                var minPopup = new mapboxgl.Popup();
 
-                minPopup.setHTML(`Total Cases: ${totalCases} <br> ${country}`)
-                marker.setPopup(minPopup)
+                minPopup.setHTML(`Total Cases: ${totalCases} <br> ${country}`);
+                marker.setPopup(minPopup);
 
-                marker.setLngLat([longitude, latitude])
+                marker.setLngLat([longitude, latitude]);
                 marker.addTo(map);
 
                 
